@@ -1,9 +1,7 @@
 import { useQuery } from "react-query";
-import { MurchRequestAndResponses } from "shapes";
-import { MurchRoutes } from "shapes/src/routes/backend";
 
-const getHomepageText = async (): Promise<MurchRequestAndResponses[MurchRoutes.homepageText]["res"]> => {
-  const response = await fetch(MurchRoutes.homepageText, {
+const getHomepageText = async (): Promise<{ text: string }> => {
+  const response = await fetch("/api/text/home", {
     credentials: "include",
   });
   if (!response.ok) {

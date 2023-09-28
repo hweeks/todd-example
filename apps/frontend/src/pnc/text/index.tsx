@@ -1,9 +1,8 @@
 import React, { createContext, useContext, useState } from "react";
-import { MurchHomePage } from "shapes";
 import { homepageTextQuery } from "./api";
 
 export interface TextContext {
-  homepage?: MurchHomePage;
+  homepage?: { text: string };
   isLoading: boolean;
 }
 
@@ -14,7 +13,7 @@ type TextProviderProps = {
 };
 
 export const TextProvider = ({ children }: TextProviderProps) => {
-  const [homeText, setHome] = useState<MurchHomePage>();
+  const [homeText, setHome] = useState<{ text: string }>();
   const homePage = homepageTextQuery(!homeText);
   if (homePage.data && !homeText) {
     setHome(homePage.data);

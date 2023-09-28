@@ -51,8 +51,7 @@ export const appStartup = () => {
   });
 };
 
-
-export const createServer = async (dbUrl: string) => {
+export const createServer = async () => {
   const server = appStartup();
   // this helper allows a restart to occurr when a file changes by also waiting for the server to die
   process.on("SIGTERM", () => {
