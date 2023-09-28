@@ -1,0 +1,18 @@
+{
+  "packageManager": "yarn@3.5.1",
+  "dependencies": {
+    "rome": "12.1.3",
+    "typescript": "5.2.2"
+  },
+  "workspaces": [
+    "apps/*"
+  ],
+  "scripts": {
+    "lint": "yarn workspaces foreach -tv run lint",
+    "lint-fix": "yarn workspaces foreach -piv run lint-fix",
+    "build-types": "yarn workspaces foreach -tv run build-types",
+    "bundle": "yarn workspaces foreach -piv run build-bundle",
+    "dev": "yarn workspaces foreach -piv run dev"
+  },
+  "private": true
+}

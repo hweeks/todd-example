@@ -1,0 +1,11 @@
+{
+  "extends": "../../tsconfig-dom.json",
+  "compilerOptions": {
+    "noEmit": true
+  },
+  "include": [
+    "images.d.ts",
+    "styled.d.ts",
+    "src/**/*"
+  ]
+}
