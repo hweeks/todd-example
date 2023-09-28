@@ -5,5 +5,9 @@
   "types": "src/index.ts",
   "dependencies": {
     "typescript": "5.2.2"
+  },
+  "scripts": {
+    "lint": "rome check . && rome format .",
+    "lint-fix": "rome check --apply-unsafe . && rome format --write ."
   }
 }
