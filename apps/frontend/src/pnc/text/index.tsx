@@ -1,8 +1,9 @@
 import React, { createContext, useContext, useState } from "react";
 import { homepageTextQuery } from "./api";
+import { HomePage } from "shapes";
 
 export interface TextContext {
-  homepage?: { text: string };
+  homepage?: HomePage;
   isLoading: boolean;
 }
 
@@ -13,7 +14,7 @@ type TextProviderProps = {
 };
 
 export const TextProvider = ({ children }: TextProviderProps) => {
-  const [homeText, setHome] = useState<{ text: string }>();
+  const [homeText, setHome] = useState<HomePage>();
   const homePage = homepageTextQuery(!homeText);
   if (homePage.data && !homeText) {
     setHome(homePage.data);

@@ -1,0 +1,9 @@
+{
+  "name": "shapes",
+  "packageManager": "yarn@3.6.1",
+  "main": "src/index.ts",
+  "types": "src/index.ts",
+  "dependencies": {
+    "typescript": "5.2.2"
+  }
+}

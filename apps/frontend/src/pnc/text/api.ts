@@ -1,7 +1,8 @@
 import { useQuery } from "react-query";
+import { AppRoutes, HomePage } from "shapes";
 
-const getHomepageText = async (): Promise<{ text: string }> => {
-  const response = await fetch("/api/text/home", {
+const getHomepageText = async (): Promise<HomePage> => {
+  const response = await fetch(AppRoutes.homepageText, {
     credentials: "include",
   });
   if (!response.ok) {

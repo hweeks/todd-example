@@ -13,6 +13,7 @@
     "react-is": "18.2.0",
     "react-query": "3.39.3",
     "react-router-dom": "6.15.0",
+    "shapes": "workspace:*",
     "styled-components": "6.0.7",
     "styled-reset": "4.5.1",
     "swc-loader": "0.2.3",
